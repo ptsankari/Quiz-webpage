@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            p{
+                font-family: 'Lucida Sans';
+
+            }
+
+            
+        </style>
+        <title>
+            quizz app
+        </title>
+    </head>
+    <body>
+
+
+             <center><p>RANDOM QUIZZ</p></center>
+
+
+
+
+             <img src="isro.jpg" id="image" style="display: none;"></img>
+
+             <input type="button" onclick="img()" id="show" value="show image"></input>
+
+             <center>
+             <form id="quiz" name="quiz">
+             
+                <div style="font-family: 'Lucida Sans';">
+
+                    <div id="question_1" style="border:solid;width:500px">
+            <p>Which is not a fruit?</p>
+            
+            <div id="choises" style="width:300px;">
+            <p style="float:left;"> <input type="radio" value="apple" name="ques1">Apple</input></p>
+            <p style="float:right;margin-left: 20px;"><input type="radio" value="watermelon" name="ques1">Watermelom</input></p><br>
+           <p style="float: left;margin-right: 20px;"><input type="radio" value="cabbage" name="ques1">Cabbage</input></p>
+           <p style="float: right;margin-right: 40px;"><input type="radio" value="banana" name="ques1">Banana</input></p><br>
+        </div> 
+
+            <br>
+            <br>
+            <br>
+            <input type="button" onclick="view()" value="View answer"></input>
+            <p id="viewone"></p>
+             
+                    </div>
+
+
+         <br>
+         <div id="question_2" style="border:solid;width:500px">
+         <p>Which colour is more radiant?</p>
+         <div id="choises2" style="width:300px">
+            <p style="float:left;"><input type="radio" value="Red" name="ques2">Red</input></p>
+            <p style="float:right;margin-left: 20px;"><input type="radio" value="White" name="ques2">White</input></p><br>
+            <p style="float: left;margin-right: 20px;"><input type="radio" value="Black" name="ques2">Black</input></p>
+            <p style="float: right;margin-right: 40px;"><input type="radio" value="Pink" name="ques2">Pink</input></p><br>
+         </div>
+            <br>
+            <br>
+            <input type="button" onclick="view2()" value="View answer"></input>
+                <p id="viewtwo"></p>
+                
+</div>
+
+                <br>
+                <p>Entomology is the science that studies?</p>
+                <input type="radio" value="rock" name="ques3">The formation of rocks</input>
+            <input type="radio" value="inse" name="ques3">Insects</input>
+            <input type="radio" value="Planets" name="ques3">Planets</input>
+            <input type="radio" value="History" name="ques3">History</input>
+            <br>
+            <br>
+            <input type="button" onclick="view3()" value="View answer"></input>
+                <p id="viewthree"></p>
+                
+                    </div>
+            </ol>
+             </form>
+            
+            </center>
+           
+
+            
+
+
+        <center><input type="button" onclick="first()" value="Check"></input>
+          <p id="correctt"></p></center>
+          
+        
+        
+        <script>
+            function first(){
+               var ques1=document.quiz.ques1.value;
+               var ques2=document.quiz.ques2.value;
+               var ques3=document.quiz.ques3.value;
+               
+               var correct=0;
+
+               if(ques1=="cabbage"){
+                correct++;
+               }
+              
+               if(ques2=="Red"){
+                correct++;
+               }
+               if(ques3=="inse"){
+                correct++;
+               }
+               
+               document.getElementById("correctt").innerHTML="You got "+correct+" points";
+
+
+            }
+            function view(){
+                document.getElementById("viewone").innerHTML="Cabbage";
+
+               }
+
+               function view2(){
+                document.getElementById("viewtwo").innerHTML="Red";
+
+               }
+               function view3(){
+                document.getElementById("viewthree").innerHTML="Insects";
+               }
+
+               function img(){
+                document.getElementById('image')
+                    .style.display = "block";
+ 
+            document.getElementById('show')
+                    .style.display = "none";
+               }
+
+
+
+
+        </script>
+
+    </body>
+</html>
